@@ -4,6 +4,7 @@ const validateRequest = require('middleware/validate-request');
 const Joi = require('joi');
 const authController = require('controllers/auth.controller');
 
+
 router.post('/register', registerSchema, authController.register);
 router.post('/login', authenticateSchema, authController.authenticate);
 router.post('/forgot-password', forgotSchema, authController.forgotPassword);
